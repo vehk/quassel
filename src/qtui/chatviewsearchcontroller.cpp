@@ -438,11 +438,8 @@ void SearchHighlightItem::paint(QPainter* painter, const QStyleOptionGraphicsIte
     Q_UNUSED(option);
     Q_UNUSED(widget);
 
-    painter->setPen(QPen(QColor(0, 0, 0), 1.5));
-    painter->setBrush(QColor(254, 237, 45, _alpha));
     painter->setRenderHints(QPainter::Antialiasing);
-    qreal radius = boundingRect().height() * 0.30;
-    painter->drawRoundedRect(boundingRect(), radius, radius);
+    painter->fillRect(boundingRect(), QColor(255,13,255, _alpha));
 }
 
 void SearchHighlightItem::updateGeometry(qreal width, qreal height)
